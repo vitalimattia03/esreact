@@ -11,6 +11,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { MiddleComponent } from './component/MiddleComponent';
 import { Value } from 'sass';
 import Incremental from './component/incremental';
+import { TodoList } from './component/todolist/TODOList';
 //creazione funzione di base
 function calcolo(n: number) {
   console.log("calcolato")
@@ -50,5 +51,7 @@ export default function App() {
     <PersonInput salvaPersona={(persona) => { console.log(persona) }} />
     <br /><br />
     <MiddleComponent onChange={text => { console.log(text); setText(text) }} />
+    <br /><br />
+    <TodoList />
   </>
 }
